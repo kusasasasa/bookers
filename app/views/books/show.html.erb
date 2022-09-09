@@ -1,0 +1,19 @@
+<body>
+
+    <% @books.each do |book| %>
+
+    <p>
+      <%= book.title%>
+    </p>
+
+    <p>
+
+      <%= book.body%>
+    </p>
+
+    <%= link_to "Edit","edit"%>
+    <%= link_to "back","index"%>
+  <% end %>
+
+
+</body>

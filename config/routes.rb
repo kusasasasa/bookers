@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources:homes ,:books, only: [:index,:show,:edit] do
 
-  member do
-      get 'new'
-      post 'create'
+  get 'books/new'
+  get 'books/index'
+  get 'books/edit'
+  get 'books/:id' => 'books#show'
 
-  end
-
-    collection do
-      get "index"
-      get 'search'
-    end
-  end
   root :to => 'homes#new'
+  resources :books
 
 end
 
