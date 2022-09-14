@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-body {
+
+body{
     background-color: #fff;
     color: #333;
     font-family: verdana, arial, helvetica, sans-serif;
@@ -44,4 +45,13 @@ p, ol, ul, td {
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
+}
+a{
+    color: #000;
+}
+a:visited {
+    color: #666;
+}
+#notice {
+    color: green;
 }

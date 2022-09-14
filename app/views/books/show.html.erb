@@ -1,19 +1,28 @@
 <body>
 
-    <% @books.each do |book| %>
+  <p id="notice"><%= flash[:complete] %> </p>
+  <p>
+    <strong>Title:</strong>
+    <td><%= @book.title %></td>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <td><%= @book.body %></td>
 
-    <p>
-      <%= book.title%>
-    </p>
+  </p>
 
-    <p>
+    <%= link_to "Edit",edit_book_path(@book.id)%>
+    |
+    <%= link_to "Back",books_path%>
 
-      <%= book.body%>
-    </p>
 
-    <%= link_to "Edit","edit"%>
-    <%= link_to "back","index"%>
-  <% end %>
+
+
+
+
+
+
+
 
 
 </body>
